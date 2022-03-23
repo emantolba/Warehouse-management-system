@@ -1147,11 +1147,13 @@ namespace linqProject
             string[] store_id_name = to_store_data.Split(' ');
             int store_id = int.Parse(store_id_name[0]);
             Item item = Ent.Items.Find(item_id);
-       
-            if (item.Stores.Where(a => a.store_id == store_id).Count() != 0)
+            Store s = Ent.Stores.Find(store_id);
+            
+            if (s != null)
             {
                 item_supplyPermition i = item.item_supplyPermition.Where(a => a.productionDate == p).First();
                 T_expi_date_TB.Text = i.expiryDate.ToString();
+               
             }
 
 
