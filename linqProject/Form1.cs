@@ -47,7 +47,7 @@ namespace linqProject
             add_items_GB.Visible = false;
             addClientItems_GB.Visible = false;
 
-            this.reportViewer1.RefreshReport();
+           
         }
 
         private void storeIdTb_SelectedIndexChanged(object sender, EventArgs e)
@@ -1170,12 +1170,12 @@ namespace linqProject
             add_items_GB.Visible = false;
             addClientItems_GB.Visible = false;
             store_report_date.Items.Clear();
-            Repirt_item_date.Items.Clear();
+            
             Report_timeInStore.Items.Clear();
             foreach(supplyPermition s in Ent.supplyPermitions)
             {
                 store_report_date.Items.Add(s.date);
-                Repirt_item_date.Items.Add(s.date);
+                
             }
             report_store_name.Items.Clear();
             report_item_Sname.Items.Clear();
@@ -1233,6 +1233,7 @@ namespace linqProject
             listBox8.Items.Clear();
             foreach(supplyPermition t in s.supplyPermitions)
             {
+                
                 foreach(item_supplyPermition x in t.item_supplyPermition)
                 {
                     listBox8.Items.Add(x.item_id+"   "+x.Item.name + "   " + x.quantity + "   " + x.productionDate + "   " + x.expiryDate);
@@ -1243,9 +1244,9 @@ namespace linqProject
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox9.Items.Clear();
-            DateTime d = DateTime.Parse(Repirt_item_date.SelectedItem.ToString());
+           // DateTime d = DateTime.Parse(Repirt_item_date.SelectedItem.ToString());
             int code = int.Parse(Report_item_name.SelectedItem.ToString().Split(' ')[0]);
-            var list = Ent.item_supplyPermition.Where(a => a.item_id == code & a.supplyPermition.date == d);
+            var list = Ent.item_supplyPermition.Where(a => a.item_id == code);
             foreach(item_supplyPermition i in list)
             {
                 listBox9.Items.Add($" {i.supplyPermition.store_id}{i.supplyPermition.Store.name} {i.productionDate.Date} {i.expiryDate.Date} {i.supplyPermition.Supplier.name}{i.Item.name} {i.quantity}");
@@ -1335,6 +1336,125 @@ namespace linqProject
                 if(M >=0)
                 {
                     listBox12.Items.Add(i.Item.name + " " + i.supplyPermition.Store.name + " " + M);
+                }
+            }
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            Store s = Ent.Stores.Where(a => a.name == report_store_name.Text.ToString()).First();
+            store_report_date.Items.Clear();
+            
+            listBox8.Items.Clear();
+            foreach (supplyPermition t in s.supplyPermitions)
+            {
+                listBox8.Items.Clear();
+
+                foreach (item_supplyPermition x in t.item_supplyPermition)
+                {
+                    if (dateTimePicker1.Value <t.date & dateTimePicker2.Value>t.date)
+                    {
+                        listBox8.Items.Add(x.item_id + "   " + x.Item.name + "   " + x.quantity + "   " + x.productionDate + "   " + x.expiryDate);
+
+                    }
+                }
+            }
+            
+        }
+
+        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
+        {
+            listBox9.Items.Clear();
+            int code = int.Parse(Report_item_name.Text.ToString().Split(' ')[0]);
+
+
+            foreach (item_supplyPermition i in Ent.item_supplyPermition)
+            {
+                if (i.item_id == code)
+                {
+                    if(dateTimePicker3.Value < i.supplyPermition.date && dateTimePicker4.Value > i.supplyPermition.date)
+                    {
+                        listBox9.Items.Add($" {i.supplyPermition.store_id} {i.supplyPermition.Store.name} {i.quantity}    {i.productionDate}  {i.expiryDate}   {i.supplyPermition.Supplier.name}");
+
+                    }
+                }
+            }
+        }
+
+        private void dateTimePicker6_ValueChanged(object sender, EventArgs e)
+        {
+            Transaction_store.Items.Clear();
+            int code = int.Parse(Transaction_items.Text.ToString().Split(' ')[0]);
+
+            foreach (Store i in Ent.Stores)
+            {
+                var stores = i.transfares.Where(a => a.Item.Item_code == code).Select(a => a.Store).Distinct();
+                foreach (Store x in stores)
+                {
+                    foreach(supplyPermition y in i.supplyPermitions)
+                    {
+                        if (dateTimePicker5.Value < y.date && dateTimePicker6.Value > y.date)
+                        {
+
+                            Transaction_store.Items.Add(x.name);
+                        }
+
+                    }
+                    
+                }
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            var sp = Ent.supplyPermitions.Where(a => a.Store.name == Report_timeInStore.Text.ToString());
+            listBox10.Items.Clear();
+            foreach (supplyPermition s in sp)
+            {
+                int day=0;int month=0; int year=0;
+                if (textBox1.Text !="")
+                {
+
+                    day = DateTime.Now.Day - s.date.Day - int.Parse(textBox1.Text);
+                }
+
+                if (textBox2.Text != "")
+                {
+
+                    month =  DateTime.Now.Month - s.date.Month - int.Parse(textBox2.Text);
+                   
+                }
+
+                if (textBox3.Text != "")
+                {
+
+                    year = DateTime.Now.Year -  s.date.Year - int.Parse(textBox3.Text);
+                }
+
+                if (month < 0)
+                {
+                    month = 12 - month;
+                    year -= 1;
+                }
+                if(year < 0 )
+                {
+                    year = 0;
+                }
+                if(day < 0)
+                {
+                    day = 0;
+                    month -=1;
+                   
+
+                }
+                if(month > 12)
+                {
+                    year += 1;
+                    month = month - 12;
+                }
+                foreach (item_supplyPermition x in s.item_supplyPermition)
+                {
+                    listBox10.Items.Add(x.item_id + "    " + x.Item.name + "    " + x.quantity + "    " + day+ " "+month+" " + year );
                 }
             }
         }

@@ -194,8 +194,6 @@ namespace linqProject
             this.listBox9 = new System.Windows.Forms.ListBox();
             this.report_item_Sname = new System.Windows.Forms.ComboBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.Repirt_item_date = new System.Windows.Forms.ComboBox();
-            this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.Report_item_name = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -216,6 +214,26 @@ namespace linqProject
             this.label55 = new System.Windows.Forms.Label();
             this.month_TB = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
             this.store_GB.SuspendLayout();
             this.Item_GB.SuspendLayout();
             this.grames_GB.SuspendLayout();
@@ -1877,6 +1895,10 @@ namespace linqProject
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.label57);
+            this.tabPage1.Controls.Add(this.label56);
+            this.tabPage1.Controls.Add(this.dateTimePicker2);
+            this.tabPage1.Controls.Add(this.dateTimePicker1);
             this.tabPage1.Controls.Add(this.store_address);
             this.tabPage1.Controls.Add(this.store_manager);
             this.tabPage1.Controls.Add(this.store_id);
@@ -1949,7 +1971,7 @@ namespace linqProject
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(401, 27);
+            this.label43.Location = new System.Drawing.Point(582, 22);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(43, 18);
             this.label43.TabIndex = 1;
@@ -1958,7 +1980,7 @@ namespace linqProject
             // store_report_date
             // 
             this.store_report_date.FormattingEnabled = true;
-            this.store_report_date.Location = new System.Drawing.Point(466, 22);
+            this.store_report_date.Location = new System.Drawing.Point(647, 17);
             this.store_report_date.Name = "store_report_date";
             this.store_report_date.Size = new System.Drawing.Size(151, 26);
             this.store_report_date.TabIndex = 0;
@@ -1967,12 +1989,14 @@ namespace linqProject
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.Controls.Add(this.label59);
+            this.tabPage2.Controls.Add(this.label58);
+            this.tabPage2.Controls.Add(this.dateTimePicker4);
+            this.tabPage2.Controls.Add(this.dateTimePicker3);
             this.tabPage2.Controls.Add(this.label48);
             this.tabPage2.Controls.Add(this.listBox9);
             this.tabPage2.Controls.Add(this.report_item_Sname);
             this.tabPage2.Controls.Add(this.label47);
-            this.tabPage2.Controls.Add(this.Repirt_item_date);
-            this.tabPage2.Controls.Add(this.label46);
             this.tabPage2.Controls.Add(this.label45);
             this.tabPage2.Controls.Add(this.Report_item_name);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
@@ -2018,24 +2042,6 @@ namespace linqProject
             this.label47.TabIndex = 4;
             this.label47.Text = "Store";
             // 
-            // Repirt_item_date
-            // 
-            this.Repirt_item_date.FormattingEnabled = true;
-            this.Repirt_item_date.Location = new System.Drawing.Point(588, 17);
-            this.Repirt_item_date.Name = "Repirt_item_date";
-            this.Repirt_item_date.Size = new System.Drawing.Size(207, 26);
-            this.Repirt_item_date.TabIndex = 3;
-            this.Repirt_item_date.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(537, 22);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(43, 18);
-            this.label46.TabIndex = 2;
-            this.label46.Text = "Date";
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -2057,6 +2063,10 @@ namespace linqProject
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage3.Controls.Add(this.label60);
+            this.tabPage3.Controls.Add(this.label46);
+            this.tabPage3.Controls.Add(this.dateTimePicker6);
+            this.tabPage3.Controls.Add(this.dateTimePicker5);
             this.tabPage3.Controls.Add(this.label54);
             this.tabPage3.Controls.Add(this.listBox11);
             this.tabPage3.Controls.Add(this.Transaction_store);
@@ -2127,6 +2137,14 @@ namespace linqProject
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage4.Controls.Add(this.button18);
+            this.tabPage4.Controls.Add(this.label64);
+            this.tabPage4.Controls.Add(this.label63);
+            this.tabPage4.Controls.Add(this.label62);
+            this.tabPage4.Controls.Add(this.textBox3);
+            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.label61);
             this.tabPage4.Controls.Add(this.label50);
             this.tabPage4.Controls.Add(this.listBox10);
             this.tabPage4.Controls.Add(this.Report_timeInStore);
@@ -2143,9 +2161,9 @@ namespace linqProject
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(69, 101);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(290, 18);
+            this.label50.Size = new System.Drawing.Size(322, 18);
             this.label50.TabIndex = 3;
-            this.label50.Text = "ID       Name   Quantity  Days in store";
+            this.label50.Text = "ID       Name   Quantity  Days  month year";
             // 
             // listBox10
             // 
@@ -2232,6 +2250,171 @@ namespace linqProject
             this.label53.Size = new System.Drawing.Size(96, 18);
             this.label53.TabIndex = 0;
             this.label53.Text = "Expiry Time";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(329, 19);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(329, 61);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker2.TabIndex = 9;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(280, 64);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(28, 18);
+            this.label56.TabIndex = 10;
+            this.label56.Text = "To";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(280, 23);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(48, 18);
+            this.label57.TabIndex = 11;
+            this.label57.Text = "From";
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(596, 13);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker3.TabIndex = 8;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(595, 47);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker4.TabIndex = 9;
+            this.dateTimePicker4.ValueChanged += new System.EventHandler(this.dateTimePicker4_ValueChanged);
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(537, 53);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(28, 18);
+            this.label58.TabIndex = 10;
+            this.label58.Text = "To";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(537, 19);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(48, 18);
+            this.label59.TabIndex = 11;
+            this.label59.Text = "From";
+            // 
+            // dateTimePicker5
+            // 
+            this.dateTimePicker5.Location = new System.Drawing.Point(606, 26);
+            this.dateTimePicker5.Name = "dateTimePicker5";
+            this.dateTimePicker5.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker5.TabIndex = 8;
+            // 
+            // dateTimePicker6
+            // 
+            this.dateTimePicker6.Location = new System.Drawing.Point(603, 64);
+            this.dateTimePicker6.Name = "dateTimePicker6";
+            this.dateTimePicker6.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker6.TabIndex = 9;
+            this.dateTimePicker6.ValueChanged += new System.EventHandler(this.dateTimePicker6_ValueChanged);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(550, 30);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(48, 18);
+            this.label46.TabIndex = 10;
+            this.label46.Text = "From";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(553, 67);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(28, 18);
+            this.label60.TabIndex = 11;
+            this.label60.Text = "To";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(359, 23);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(0, 18);
+            this.label61.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(473, 14);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(61, 24);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(570, 17);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(61, 24);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(667, 17);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(61, 24);
+            this.textBox3.TabIndex = 8;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(637, 22);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(18, 18);
+            this.label62.TabIndex = 9;
+            this.label62.Text = "Y";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(544, 17);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(22, 18);
+            this.label63.TabIndex = 10;
+            this.label63.Text = "M";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(447, 17);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(20, 18);
+            this.label64.TabIndex = 11;
+            this.label64.Text = "D";
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(528, 58);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(111, 32);
+            this.button18.TabIndex = 12;
+            this.button18.Text = "show result";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // Form1
             // 
@@ -2463,8 +2646,6 @@ namespace linqProject
         private System.Windows.Forms.Label store_address;
         private System.Windows.Forms.Label store_manager;
         private System.Windows.Forms.Label store_id;
-        private System.Windows.Forms.ComboBox Repirt_item_date;
-        private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.ComboBox Report_item_name;
         private System.Windows.Forms.ComboBox report_item_Sname;
@@ -2489,6 +2670,26 @@ namespace linqProject
         private System.Windows.Forms.TextBox month_TB;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Button showItems_B;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.DateTimePicker dateTimePicker6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker5;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label61;
     }
 }
 
